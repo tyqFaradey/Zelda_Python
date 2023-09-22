@@ -38,7 +38,7 @@ maps2Darray = maps.maps2Darray
 Dmaps2Darray = maps.Dmaps2Darray
 
 g = 7
-h = 8
+h = 7
 g1 = 2
 h1 = 0
 minig = 2
@@ -308,10 +308,9 @@ while True:
     dpad_y = gamepad.buttons.ABS_HAT0Y.value
 
     if (keys[pg.K_w] or dpad_y == -1):
-        pActiveAnimF = pAnimF1b
         if ii % 22 == 0:
             pActiveAnimF = pAnimF1b
-        else:
+        elif ii % 22 == 11:
             pActiveAnimF = pAnimF2b
         
         if pHbRectTOP.collidelist(rectsB) == -1:
