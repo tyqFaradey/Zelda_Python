@@ -15,7 +15,7 @@ pg.display.set_caption('game.')
 clock = pg.time.Clock()
 #gamepad.listen()
 
-surf = pg.Surface((width, 180))
+#surf = pg.Surface((width, 180))
 
 rectW = 80
 rectH = 80
@@ -36,13 +36,10 @@ mapsyLim = [178, 982]
 
 maps2Darray = maps.maps2Darray
 Dmaps2Darray = maps.Dmaps2Darray
+surfArray = maps.surfArray
 
 g = 7
 h = 7
-g1 = 2
-h1 = 0
-minig = 2
-minig = 1
 
 activeInd = [g, h]
 
@@ -87,7 +84,14 @@ class Player(pg.sprite.Sprite):
 
 demention = 0
 
+
+
+#def map_randaring(maps, surf):
+#    global rectsB, rectsE, L1stList, L2ndList, P1stList, P2ndList, M1stList, M2ndList, N1stList, N2ndList
+    
+
 col = (0, 255, 0)
+
 lineIsColLT = False
 lineIsColRT = False
 lineIsColLB = False
@@ -98,7 +102,7 @@ hbindic = False
 ii = 0
 while True:
     ########################################################
-    for event in pg.event.get():
+    for event in pg.event.get():  
         if event.type == pg.QUIT:
             gamepad.stop_listening()
             pg.quit()
@@ -280,6 +284,7 @@ while True:
             x += rectW
         y += rectH
         x = 0
+    
     ########################################################
 
     ##############Rectangular Coordinates###################
@@ -290,10 +295,10 @@ while True:
         pg.draw.rect(screen, (255, 0, 0), pHbRectLEFT)
         pg.draw.rect(screen, (255, 0, 0), pHbRectRIGHT)
 
-        pg.draw.rect(screen, col, pHbRectLT)
-        pg.draw.rect(screen, col, pHbRectLB)
-        pg.draw.rect(screen, col, pHbRectRB)
-        pg.draw.rect(screen, col, pHbRectRT)
+        pg.draw.rect(screen, (0, 255, 0), pHbRectLT)
+        pg.draw.rect(screen, (0, 255, 0), pHbRectLB)
+        pg.draw.rect(screen, (0, 255, 0), pHbRectRB)
+        pg.draw.rect(screen, (0, 255, 0), pHbRectRT)
     ########################################################
     keys = pg.key.get_pressed()
 
@@ -312,7 +317,6 @@ while True:
             pActiveAnimF = pAnimF1b
         elif ii % 22 == 11:
             pActiveAnimF = pAnimF2b
-        
         if pHbRectTOP.collidelist(rectsB) == -1:
             for i in range(len(P1stList)):
                 if pHbRectRT.clipline(P1stList[i], P2ndList[i]):
@@ -323,12 +327,10 @@ while True:
             py -= pspeed    
     
     elif (keys[pg.K_s] or dpad_y == 1):
-
         if ii % 22 == 0:
             pActiveAnimF = pAnimF2f
         elif ii % 22 == 11:
             pActiveAnimF = pAnimF1f
-
         if pHbRectBOTTOM.collidelist(rectsB) == -1:
             for i in range(len(M1stList)):
                 if pHbRectRB.clipline(M1stList[i], M2ndList[i]):
@@ -339,12 +341,10 @@ while True:
             py += pspeed
 
     elif (keys[pg.K_a] or dpad_x == -1):
-
         if ii % 22 == 0:
             pActiveAnimF = pAnimF2l
         elif ii % 22 == 11:
             pActiveAnimF = pAnimF1l
-
         if pHbRectLEFT.collidelist(rectsB) == -1:
             for i in range(len(L1stList)):
                 if pHbRectLT.clipline(L1stList[i], L2ndList[i]):
@@ -355,12 +355,10 @@ while True:
             px -= pspeed
 
     elif (keys[pg.K_d] or dpad_x == 1):
-
         if ii % 22 == 0:
                 pActiveAnimF = pAnimF2r
         elif ii % 22 == 11:
             pActiveAnimF = pAnimF1r
-
         if pHbRectRIGHT.collidelist(rectsB) == -1:
             for i in range(len(P1stList)):
                 if pHbRectRT.clipline(P1stList[i], P2ndList[i]):
@@ -372,7 +370,6 @@ while True:
 
     p = Player(px, py, pActiveAnimF)
     screen.blit(p.image, p.rect)
-
     
     if ii == 90:
         ii = 0
