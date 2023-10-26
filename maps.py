@@ -1,3 +1,4 @@
+import pygame as pg
 
 map1A = ['00000000000000000',
          '00000000000000000',
@@ -1337,3 +1338,161 @@ Dmaps2Darray = [
 [mapD20, mapD20, mapD20, mapD20, mapD20, mapD20],
 [mapD20, mapD20, mapD20, mapD20, mapD20, mapD20]
 ]
+
+surf1A = pg.Surface((1280, 800))
+surf2A = pg.Surface((1280, 800))
+surf3A = pg.Surface((1280, 800))
+surf4A = pg.Surface((1280, 800))
+surf5A = pg.Surface((1280, 800))
+surf6A = pg.Surface((1280, 800))
+surf7A = pg.Surface((1280, 800))
+surf8A = pg.Surface((1280, 800))
+
+surf1M = pg.Surface((1280, 800))
+surf2M = pg.Surface((1280, 800))
+surf3M = pg.Surface((1280, 800))
+surf4M = pg.Surface((1280, 800))
+surf5M = pg.Surface((1280, 800))
+surf6M = pg.Surface((1280, 800))
+surf7M = pg.Surface((1280, 800))
+surf8M = pg.Surface((1280, 800))
+
+surf1L = pg.Surface((1280, 800))
+surf2L = pg.Surface((1280, 800))
+surf3L = pg.Surface((1280, 800))
+surf4L = pg.Surface((1280, 800))
+surf5L = pg.Surface((1280, 800))
+surf6L = pg.Surface((1280, 800))
+surf7L = pg.Surface((1280, 800))
+surf8L = pg.Surface((1280, 800))
+
+surf1K = pg.Surface((1280, 800))
+surf2K = pg.Surface((1280, 800))
+surf3K = pg.Surface((1280, 800))
+surf4K = pg.Surface((1280, 800))
+surf5K = pg.Surface((1280, 800))
+surf6K = pg.Surface((1280, 800))
+surf7K = pg.Surface((1280, 800))
+surf8K = pg.Surface((1280, 800))
+
+surf1J = pg.Surface((1280, 800))
+surf2J = pg.Surface((1280, 800))
+surf3J = pg.Surface((1280, 800))
+surf4J = pg.Surface((1280, 800))
+surf5J = pg.Surface((1280, 800))
+surf6J = pg.Surface((1280, 800))
+surf7J = pg.Surface((1280, 800))
+surf8J = pg.Surface((1280, 800))
+
+surf1I = pg.Surface((1280, 800))
+surf2I = pg.Surface((1280, 800))
+surf3I = pg.Surface((1280, 800))
+surf4I = pg.Surface((1280, 800))
+surf5I = pg.Surface((1280, 800))
+surf6I = pg.Surface((1280, 800))
+surf7I = pg.Surface((1280, 800))
+surf8I = pg.Surface((1280, 800))
+
+surf1H = pg.Surface((1280, 800))
+surf2H = pg.Surface((1280, 800))
+surf3H = pg.Surface((1280, 800))
+surf4H = pg.Surface((1280, 800))
+surf5H = pg.Surface((1280, 800))
+surf6H = pg.Surface((1280, 800))
+surf7H = pg.Surface((1280, 800))
+surf8H = pg.Surface((1280, 800))
+
+surf1G = pg.Surface((1280, 800))
+surf2G = pg.Surface((1280, 800))
+surf3G = pg.Surface((1280, 800))
+surf4G = pg.Surface((1280, 800))
+surf5G = pg.Surface((1280, 800))
+surf6G = pg.Surface((1280, 800))
+surf7G = pg.Surface((1280, 800))
+surf8G = pg.Surface((1280, 800))
+
+surf1F = pg.Surface((1280, 800))
+surf2F = pg.Surface((1280, 800))
+surf3F = pg.Surface((1280, 800))
+surf4F = pg.Surface((1280, 800))
+surf5F = pg.Surface((1280, 800))
+surf6F = pg.Surface((1280, 800))
+surf7F = pg.Surface((1280, 800))
+surf8F = pg.Surface((1280, 800))
+
+surf1E = pg.Surface((1280, 800))
+surf2E = pg.Surface((1280, 800))
+surf3E = pg.Surface((1280, 800))
+surf4E = pg.Surface((1280, 800))
+surf5E = pg.Surface((1280, 800))
+surf6E = pg.Surface((1280, 800))
+surf7E = pg.Surface((1280, 800))
+surf8E = pg.Surface((1280, 800))
+
+surf1D = pg.Surface((1280, 800))
+surf2D = pg.Surface((1280, 800))
+surf3D = pg.Surface((1280, 800))
+surf4D = pg.Surface((1280, 800))
+surf5D = pg.Surface((1280, 800))
+surf6D = pg.Surface((1280, 800))
+surf7D = pg.Surface((1280, 800))
+surf8D = pg.Surface((1280, 800))
+
+surf1C = pg.Surface((1280, 800))
+surf2C = pg.Surface((1280, 800))
+surf3C = pg.Surface((1280, 800))
+surf4C = pg.Surface((1280, 800))
+surf5C = pg.Surface((1280, 800))
+surf6C = pg.Surface((1280, 800))
+surf7C = pg.Surface((1280, 800))
+surf8C = pg.Surface((1280, 800))
+
+surf1B = pg.Surface((1280, 800))
+surf2B = pg.Surface((1280, 800))
+surf3B = pg.Surface((1280, 800))
+surf4B = pg.Surface((1280, 800))
+surf5B = pg.Surface((1280, 800))
+surf6B = pg.Surface((1280, 800))
+surf7B = pg.Surface((1280, 800))
+surf8B = pg.Surface((1280, 800))
+
+surf1N = pg.Surface((1280, 800))
+surf2N = pg.Surface((1280, 800))
+surf3N = pg.Surface((1280, 800))
+surf4N = pg.Surface((1280, 800))
+surf5N = pg.Surface((1280, 800))
+surf6N = pg.Surface((1280, 800))
+surf7N = pg.Surface((1280, 800))
+surf8N = pg.Surface((1280, 800))
+
+surf1O = pg.Surface((1280, 800))
+surf2O = pg.Surface((1280, 800))
+surf3O = pg.Surface((1280, 800))
+surf4O = pg.Surface((1280, 800))
+surf5O = pg.Surface((1280, 800))
+surf6O = pg.Surface((1280, 800))
+surf7O = pg.Surface((1280, 800))
+surf8O = pg.Surface((1280, 800))
+
+surf1P = pg.Surface((1280, 800))
+surf2P = pg.Surface((1280, 800))
+surf3P = pg.Surface((1280, 800))
+surf4P = pg.Surface((1280, 800))
+surf5P = pg.Surface((1280, 800))
+surf6P = pg.Surface((1280, 800))
+surf7P = pg.Surface((1280, 800))
+surf8P = pg.Surface((1280, 800))
+
+surfArray = [
+    [surf1A, surf1B, surf1C, surf1D, surf1E, surf1F, surf1G, surf1H, surf1I, surf1J, surf1K, surf1L, surf1M, surf1N, surf1O, surf1P],
+    [surf2A, surf2B, surf2C, surf2D, surf2E, surf2F, surf2G, surf2H, surf2I, surf2J, surf2K, surf2L, surf2M, surf2N, surf2O, surf2P],
+    [surf3A, surf3B, surf3C, surf3D, surf3E, surf3F, surf3G, surf3H, surf3I, surf3J, surf3K, surf3L, surf3M, surf3N, surf3O, surf3P],
+    [surf4A, surf4B, surf4C, surf4D, surf4E, surf4F, surf4G, surf4H, surf4I, surf4J, surf4K, surf4L, surf4M, surf4N, surf4O, surf4P],
+    [surf5A, surf5B, surf5C, surf5D, surf5E, surf5F, surf5G, surf5H, surf5I, surf5J, surf5K, surf5L, surf5M, surf5N, surf5O, surf5P],
+    [surf6A, surf6B, surf6C, surf6D, surf6E, surf6F, surf6G, surf6H, surf6I, surf6J, surf6K, surf6L, surf6M, surf6N, surf6O, surf6P],
+    [surf7A, surf7B, surf7C, surf7D, surf7E, surf7F, surf7G, surf7H, surf7I, surf7J, surf7K, surf7L, surf7M, surf7N, surf7O, surf7P],
+    [surf8A, surf8B, surf8C, surf8D, surf8E, surf8F, surf8G, surf8H, surf8I, surf8J, surf8K, surf8L, surf8M, surf8N, surf8O, surf8P]
+]
+
+
+
