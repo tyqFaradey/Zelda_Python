@@ -2,8 +2,8 @@ from pygamepad.gamepads.default import Gamepad
 import pygame as pg
 import maps as maps
 
-width = 1280
-height = 980
+width = 1024
+height = 884
 
 FPS = 90
 pg.init()
@@ -69,6 +69,7 @@ class Player(pg.sprite.Sprite):
         self.rect = self.image.get_rect(topleft=(x, y))
 
 
+
 def Map_render(maps, surf):
     global rectsB, rectsE, L1stList, L2ndList, P1stList, P2ndList, M1stList, M2ndList, N1stList, N2ndList
     rectsB = []
@@ -85,281 +86,279 @@ def Map_render(maps, surf):
     y = 0
     for i in maps:
         for j in i:
-            if j == '=':
-                rectE = pg.Rect(x, y, rectW, rectH)
-                rectsE.append(rectE)
-                pg.draw.rect(surf, (0, 0, 0), rectE)
-            if j == '!':
-                rect = pg.Rect(x, y, rectW, rectH)
-                rectsB.append(rect)
-            if j == '1':
-                border = Border(x, y, bord1)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == 'B':
-                border = Border(x, y, bord14)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == '2':
-                border = Border(x, y, bord2)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == 'S':
-                border = Border(x, y, bord15)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == '3':
-                border = Border(x, y, bord3)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == 'A':
-                border = Border(x, y, bord17)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == '4':
-                border = Border(x, y, bord4)
-                #border.rect[3] -= 5
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == 'H':
-                border = Border(x, y, bord16)
-                #border.rect[3] -= 5
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == '5':
-                border = Border(x, y, bord5)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-                 
-            if j == '6':
-                border = Border(x, y, bord6)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == '7':
-                border = Border(x, y, bord7)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == '8':
-                border = Border(x, y, bord8)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == '9':
-                border = Border(x, y, bord9)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (0, 255, 0), border.rect, 1)
-            if j == 'V':
-                border = Border(x, y, bord13)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (0, 255, 0), border.rect, 1)
-            if j == 'Q':
-                border = Border(x, y, bord7)
-                rectsB.append(border.rect)
-                surf.blit(pg.transform.flip(border.image, True, False), border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == 'W':
-                border = Border(x, y, bord6)
-                rectsB.append(border.rect)
-                surf.blit(pg.transform.flip(border.image, True, False), border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == 'Z':
-                border = Border(x, y, bord10)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == 'C':
-                border = Border(x, y, bord12)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-            if j == 'X':
-                border = Border(x, y, bord11)
-                rectsB.append(border.rect)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
-
-            if j == 'P':
-                P1st = (x, y+180)
-                P2nd = (x+79, y+79+180)
-                P1stList.append(P1st)
-                P2ndList.append(P2nd)
-                
-                subRectp1 = pg.Rect(x, y, 1, 1)
-                subRectp2 = pg.Rect(x+79, y+79, 1, 1)
-                rectsB.append(subRectp1)
-                rectsB.append(subRectp2)
-
-                border = Border(x, y, bordP)
-                surf.blit(border.image, border.rect)
-
-                if hbindic == True:
-                    pg.draw.line(surf, (255, 0, 0), (subRectp1.x, subRectp1.y), (subRectp2.x, subRectp2.y))         
-            if j == 'L':
-                if  i[i.index(j)+1] == 'P':
-                    rect = pg.Rect(x, y + 30, rectW*2, 2)
+            match j:
+                case '=':
+                    rectE = pg.Rect(x, y, rectW, rectH)
+                    rectsE.append(rectE)
+                    pg.draw.rect(surf, (0, 0, 0), rectE)
+                case '!':
+                    rect = pg.Rect(x, y, rectW, rectH)
                     rectsB.append(rect)
-                    
-                L1st = (x+80, y+180)
-                L2nd = (x, y+80+180)
-                L1stList.append(L1st)
-                L2ndList.append(L2nd)
+                case '1':
+                    border = Border(x, y, bord1)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case 'B':
+                    border = Border(x, y, bord14)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case '2':
+                    border = Border(x, y, bord2)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case 'S':
+                    border = Border(x, y, bord15)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case '3':
+                    border = Border(x, y, bord3)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case 'A':
+                    border = Border(x, y, bord17)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case '4':
+                    border = Border(x, y, bord4)
+                    #border.rect[3] -= 5
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case 'H':
+                    border = Border(x, y, bord16)
+                    #border.rect[3] -= 5
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case '5':
+                    border = Border(x, y, bord5)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
 
-                subRectl1 = pg.Rect(x+80, y, 1, 1)
-                subRectl2 = pg.Rect(x, y+79, 1, 1)
-                rectsB.append(subRectl1)
-                rectsB.append(subRectl2)
+                case '6':
+                    border = Border(x, y, bord6)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case '7':
+                    border = Border(x, y, bord7)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
 
-                border = Border(x, y, bordL)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.line(surf, (255, 0, 0), (subRectl1.x, subRectl1.y), (subRectl2.x, subRectl2.y))        
-            if j == 'M':
-                M1st = (x+80, y+180)
-                M2nd = (x, y+80+180)
-                M1stList.append(M1st)
-                M2ndList.append(M2nd)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case '8':
+                    border = Border(x, y, bord8)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case '9':
+                    border = Border(x, y, bord9)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (0, 255, 0), border.rect, 1)
+                case 'V':
+                    border = Border(x, y, bord13)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (0, 255, 0), border.rect, 1)
+                case 'Q':
+                    border = Border(x, y, bord7)
+                    rectsB.append(border.rect)
+                    surf.blit(pg.transform.flip(border.image, True, False), border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case 'W':
+                    border = Border(x, y, bord6)
+                    rectsB.append(border.rect)
+                    surf.blit(pg.transform.flip(border.image, True, False), border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case 'Z':
+                    border = Border(x, y, bord10)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case 'C':
+                    border = Border(x, y, bord12)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
+                case 'X':
+                    border = Border(x, y, bord11)
+                    rectsB.append(border.rect)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.rect(surf, (255, 0, 0), border.rect, 1)
 
-                subRectm1 = pg.Rect(x+80, y, 1, 1)
-                subRectm2 = pg.Rect(x, y+80, 1, 1)
-                rectsB.append(subRectm1)
-                rectsB.append(subRectm2)
+                case 'P':
+                    P1st = (x, y+180)
+                    P2nd = (x+63, y+63+180)
+                    P1stList.append(P1st)
+                    P2ndList.append(P2nd)
 
-                border = Border(x, y, bordM)
-                surf.blit(border.image, border.rect)
+                    subRectp1 = pg.Rect(x, y, 1, 1)
+                    subRectp2 = pg.Rect(x+63, y+63, 1, 1)
+                    rectsB.append(subRectp1)
+                    rectsB.append(subRectp2)
 
-                if hbindic == True:
-                    pg.draw.line(surf, (255, 0, 0), (subRectm1.x, subRectm1.y), (subRectm2.x, subRectm2.y))         
-            if j == 'N':
-                if  i[i.index(j)+1] == 'M':
-                    rect = pg.Rect(x, y + 50, rectW*2, 2)
-                    rectsB.append(rect)
-                N1st = (x, y + 180)
-                N2nd = (x+79, y+79+180)
-                N1stList.append(N1st)
-                N2ndList.append(N2nd)
+                    border = Border(x, y, bordP)
+                    surf.blit(border.image, border.rect)
 
-                subRectn1 = pg.Rect(x, y, 1, 1)
-                subRectn2 = pg.Rect(x+79, y+79, 1, 1)
-                rectsB.append(subRectn1)
-                rectsB.append(subRectn2)
+                    if hbindic == True:
+                        pg.draw.line(surf, (255, 0, 0), (subRectp1.x, subRectp1.y), (subRectp2.x, subRectp2.y))         
+                case 'L':
+                    if  i[i.index(j)+1] == 'P':
+                        rect = pg.Rect(x, y + 30, rectW*2, 2)
+                        rectsB.append(rect)
 
-                border = Border(x, y, bordN)
-                surf.blit(border.image, border.rect)
+                    L1st = (x+63, y+180)
+                    L2nd = (x, y+63+180)
+                    L1stList.append(L1st)
+                    L2ndList.append(L2nd)
 
-                if hbindic == True:
-                    pg.draw.line(surf, (255, 0, 0), (subRectn1.x, subRectn1.y), (subRectn2.x, subRectn2.y))
-            if j == 'F':
-                P1st = (x, y+180)
-                P2nd = (x+79, y+79+180)
-                P1stList.append(P1st)
-                P2ndList.append(P2nd)
-                
-                subRectp1 = pg.Rect(x, y, 1, 1)
-                subRectp2 = pg.Rect(x+79, y+79, 1, 1)
-                rectsB.append(subRectp1)
-                rectsB.append(subRectp2)
+                    subRectl1 = pg.Rect(x+63, y, 1, 1)
+                    subRectl2 = pg.Rect(x, y+63, 1, 1)
+                    rectsB.append(subRectl1)
+                    rectsB.append(subRectl2)
 
-                border = Border(x, y, bordF)
-                surf.blit(border.image, border.rect)
+                    border = Border(x, y, bordL)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.line(surf, (255, 0, 0), (subRectl1.x, subRectl1.y), (subRectl2.x, subRectl2.y))        
+                case 'M':
+                    M1st = (x+63, y+180)
+                    M2nd = (x, y+63+180)
+                    M1stList.append(M1st)
+                    M2ndList.append(M2nd)
 
-                if hbindic == True:
-                    pg.draw.line(surf, (255, 0, 0), (subRectp1.x, subRectp1.y), (subRectp2.x, subRectp2.y))         
-            if j == 'G':
-                if  i[i.index(j)+1] == 'F':
-                    rect = pg.Rect(x, y + 30, rectW*2, 2)
-                    rectsB.append(rect)
-                    
-                L1st = (x+80, y+180)
-                L2nd = (x, y+80+180)
-                L1stList.append(L1st)
-                L2ndList.append(L2nd)
+                    subRectm1 = pg.Rect(x+64, y, 1, 1)
+                    subRectm2 = pg.Rect(x, y+64, 1, 1)
+                    rectsB.append(subRectm1)
+                    rectsB.append(subRectm2)
 
-                subRectl1 = pg.Rect(x+80, y, 1, 1)
-                subRectl2 = pg.Rect(x, y+79, 1, 1)
-                rectsB.append(subRectl1)
-                rectsB.append(subRectl2)
+                    border = Border(x, y, bordM)
+                    surf.blit(border.image, border.rect)
 
-                border = Border(x, y, bordG)
-                surf.blit(border.image, border.rect)
-                if hbindic == True:
-                    pg.draw.line(surf, (255, 0, 0), (subRectl1.x, subRectl1.y), (subRectl2.x, subRectl2.y))        
-            if j == 'D':
-                M1st = (x+80, y+180)
-                M2nd = (x, y+80+180)
-                M1stList.append(M1st)
-                M2ndList.append(M2nd)
+                    if hbindic == True:
+                        pg.draw.line(surf, (255, 0, 0), (subRectm1.x, subRectm1.y), (subRectm2.x, subRectm2.y))         
+                case 'N':
+                    if  i[i.index(j)+1] == 'M':
+                        rect = pg.Rect(x, y + 50, rectW*2, 2)
+                        rectsB.append(rect)
+                    N1st = (x, y + 180)
+                    N2nd = (x+63, y+63+180)
+                    N1stList.append(N1st)
+                    N2ndList.append(N2nd)
 
-                subRectm1 = pg.Rect(x+80, y, 1, 1)
-                subRectm2 = pg.Rect(x, y+80, 1, 1)
-                rectsB.append(subRectm1)
-                rectsB.append(subRectm2)
+                    subRectn1 = pg.Rect(x, y, 1, 1)
+                    subRectn2 = pg.Rect(x+63, y+63, 1, 1)
+                    rectsB.append(subRectn1)
+                    rectsB.append(subRectn2)
 
-                border = Border(x, y, bordD)
-                surf.blit(border.image, border.rect)
+                    border = Border(x, y, bordN)
+                    surf.blit(border.image, border.rect)
 
-                if hbindic == True:
-                    pg.draw.line(surf, (255, 0, 0), (subRectm1.x, subRectm1.y), (subRectm2.x, subRectm2.y))         
-            if j == 'J':
-                if  i[i.index(j)+1] == 'D':
-                    rect = pg.Rect(x, y + 50, rectW*2, 2)
-                    rectsB.append(rect)
-                N1st = (x, y + 180)
-                N2nd = (x+79, y+79+180)
-                N1stList.append(N1st)
-                N2ndList.append(N2nd)
+                    if hbindic == True:
+                        pg.draw.line(surf, (255, 0, 0), (subRectn1.x, subRectn1.y), (subRectn2.x, subRectn2.y))
+                case 'F':
+                    P1st = (x, y+180)
+                    P2nd = (x+63, y+63+180)
+                    P1stList.append(P1st)
+                    P2ndList.append(P2nd)
 
-                subRectn1 = pg.Rect(x, y, 1, 1)
-                subRectn2 = pg.Rect(x+79, y+79, 1, 1)
-                rectsB.append(subRectn1)
-                rectsB.append(subRectn2)
+                    subRectp1 = pg.Rect(x, y, 1, 1)
+                    subRectp2 = pg.Rect(x+63, y+63, 1, 1)
+                    rectsB.append(subRectp1)
+                    rectsB.append(subRectp2)
 
-                border = Border(x, y, bordJ)
-                surf.blit(border.image, border.rect)
+                    border = Border(x, y, bordF)
+                    surf.blit(border.image, border.rect)
 
-                if hbindic == True:
-                    pg.draw.line(surf, (255, 0, 0), (subRectn1.x, subRectn1.y), (subRectn2.x, subRectn2.y))
-            
-            
-            
+                    if hbindic == True:
+                        pg.draw.line(surf, (255, 0, 0), (subRectp1.x, subRectp1.y), (subRectp2.x, subRectp2.y))         
+                case 'G':
+                    if  i[i.index(j)+1] == 'F':
+                        rect = pg.Rect(x, y + 30, rectW*2, 2)
+                        rectsB.append(rect)
+
+                    L1st = (x+63, y+180)
+                    L2nd = (x, y+63+180)
+                    L1stList.append(L1st)
+                    L2ndList.append(L2nd)
+
+                    subRectl1 = pg.Rect(x+63, y, 1, 1)
+                    subRectl2 = pg.Rect(x, y+63, 1, 1)
+                    rectsB.append(subRectl1)
+                    rectsB.append(subRectl2)
+
+                    border = Border(x, y, bordG)
+                    surf.blit(border.image, border.rect)
+                    if hbindic == True:
+                        pg.draw.line(surf, (255, 0, 0), (subRectl1.x, subRectl1.y), (subRectl2.x, subRectl2.y))        
+                case 'D':
+                    M1st = (x+63, y+180)
+                    M2nd = (x, y+63+180)
+                    M1stList.append(M1st)
+                    M2ndList.append(M2nd)
+
+                    subRectm1 = pg.Rect(x+63, y, 1, 1)
+                    subRectm2 = pg.Rect(x, y+63, 1, 1)
+                    rectsB.append(subRectm1)
+                    rectsB.append(subRectm2)
+
+                    border = Border(x, y, bordD)
+                    surf.blit(border.image, border.rect)
+
+                    if hbindic == True:
+                        pg.draw.line(surf, (255, 0, 0), (subRectm1.x, subRectm1.y), (subRectm2.x, subRectm2.y))         
+                case 'J':
+                    if  i[i.index(j)+1] == 'D':
+                        rect = pg.Rect(x, y + 50, rectW*2, 2)
+                        rectsB.append(rect)
+                    N1st = (x, y + 180)
+                    N2nd = (x+63, y+63+180)
+                    N1stList.append(N1st)
+                    N2ndList.append(N2nd)
+
+                    subRectn1 = pg.Rect(x, y, 1, 1)
+                    subRectn2 = pg.Rect(x+63, y+63, 1, 1)
+                    rectsB.append(subRectn1)
+                    rectsB.append(subRectn2)
+
+                    border = Border(x, y, bordJ)
+                    surf.blit(border.image, border.rect)
+
+                    if hbindic == True:
+                        pg.draw.line(surf, (255, 0, 0), (subRectn1.x, subRectn1.y), (subRectn2.x, subRectn2.y))
             x += rectW
         y += rectH
         x = 0
 
-rectW = 80
-rectH = 80
-pW = 80
-pH = 80
+rectW = 64
+rectH = 64
+pW = 64
+pH = 64
 
 px = 600
 py = 600
@@ -367,7 +366,7 @@ py = 600
 zx = 0
 zy = 0
 
-dx = 1280
+dx = width
 dy = 0
 
 minix = 155
@@ -377,8 +376,8 @@ maps2Darray = maps.maps2Darray
 surfArray = maps.surfArray
 maps = maps2Darray  
 
-g = 6
-h = 10
+g = 7
+h = 7
 
 a = 0
 b = 0 
@@ -395,12 +394,14 @@ hbindic = False
 counterx = 0
 countery = 0
 
-speed = 10
+speed = 16
 pspeed = 5
 
-rectsB = []
+enemhp = 3
 
-m = 0
+hit = False
+
+direction = 3
 
 ii = 0
 while True:
@@ -409,6 +410,9 @@ while True:
         if event.type == pg.QUIT:
             gamepad.stop_listening()
             pg.quit()
+        elif event.type == pg.KEYDOWN:
+            if event.key == pg.K_e:
+                hit = True
     ########################################################
     screen.fill((252, 216, 168))
     activSurf = surfArray[g][h]
@@ -444,19 +448,19 @@ while True:
     else:
         hbindic = False
 
-    if px+40 >= width:
+    if px+32 >= width + 1:
         scrollxr = True
         dy = 0
         b = 1
-    if px+40 <= -1:
+    if px+32 <= -1:
         scrollxl = True
         dy = 0
         b = -1  
-    if py+40 <= 180:
+    if py+32 <= 179:
         scrollyu = True
         dx = 0
         a = -1
-    if py+40 >= height + 1:
+    if py+32 >= height + 1:
         scrollyd = True
         dx = 0
         a = 1
@@ -469,6 +473,8 @@ while True:
             zx -= speed
             minix += 0.1563
             counterx += speed
+            if px <= 0:
+                px = 0
         else:
             scrollxr = False
             goStat = True
@@ -478,17 +484,18 @@ while True:
             b = 0
     if scrollxl:
         goStat = False
-        dx = -1280
+        dx = -width
         if counterx != 1280:
             px += speed
             zx += speed
             minix -= 0.1563
             counterx += speed
+            if px+80 >= width:
+                px = width-80
         else:
             scrollxl = False
             goStat = True
             counterx = 0
-            #minix -= 20
             h += b
             zx = 0
             b = 0
@@ -525,13 +532,20 @@ while True:
             zy = 0
             a = 0
 
-    Map_render(maps[g+a][h+b], surfArray[g+a][h+b])
     Map_render(maps[g][h], surfArray[g][h])
+    Map_render(maps[g+a][h+b], surfArray[g+a][h+b])
+    
     for i in rectsB:
         i[1] += 180
 
+    if enemhp > 0:
+        enemRect = pg.Rect(900, 620, 80, 80)
+        rectsB.append(enemRect)
+        pg.draw.rect(surfArray[g][h], (255, 0, 0), (900, 440, 80, 80))
+
     if goStat:
         if (keys[pg.K_w] or dpad_y == -1):
+            direction = 1
             if ii % 22 == 0:
                 m = 1
                 pActiveAnimF = pAnimF1b
@@ -548,6 +562,7 @@ while True:
                 py -= pspeed    
 
         elif (keys[pg.K_s] or dpad_y == 1):
+            direction = 3
             if ii % 22 == 0:
                 m = 3
                 pActiveAnimF = pAnimF2f
@@ -564,6 +579,7 @@ while True:
                 py += pspeed
 
         elif (keys[pg.K_a] or dpad_x == -1):
+            direction = 4
             if ii % 22 == 0:
                 m = 5
                 pActiveAnimF = pAnimF2l
@@ -580,6 +596,7 @@ while True:
                 px -= pspeed
 
         elif (keys[pg.K_d] or dpad_x == 1):
+            direction = 2
             if ii % 22 == 0:
                 m = 7
                 pActiveAnimF = pAnimF2r
@@ -600,23 +617,9 @@ while True:
     screen.blit(surfArray[g][h], (zx, zy+180))
     screen.blit(surfArray[g+a][h+b], (zx + dx, zy + dy+180))
 
-    #if hbindic:
-    #    for i in rectsB:
-    #        pg.draw.rect(screen, (255, 255, 255), i, 1)
-
     screen.blit(p.image, p.rect)
 
-    #pg.draw.rect(screen, (255, 0, 0), p.rect, 1)
-
-    #pg.draw.rect(screen, (255, 0, 0), pHbRectTOP)
-    #pg.draw.rect(screen, (255, 0, 0), pHbRectBOTTOM)
-    #pg.draw.rect(screen, (255, 0, 0), pHbRectRIGHT)
-    #pg.draw.rect(screen, (255, 0, 0), pHbRectLEFT)
-
-    #pg.draw.rect(screen, (0, 255, 0), pHbRectLT)
-    #pg.draw.rect(screen, (0, 255, 0), pHbRectRT)
-    #pg.draw.rect(screen, (0, 255, 0), pHbRectLB)
-    #pg.draw.rect(screen, (0, 255, 0), pHbRectRB)
+    pg.draw.rect(screen, (0, 255, 0), (px + 100, py + 40, 1, 1))
 
     pg.draw.rect(screen, (0, 0, 0), mainRect)
     pg.draw.rect(screen, (128, 128, 128), miniMapRect)
